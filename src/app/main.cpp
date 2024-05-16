@@ -1509,13 +1509,28 @@ int main( int argc, char *argv[] )
   QString splashPath( QgsCustomization::instance()->splashPath() );
   QPixmap pixmap( splashPath + QStringLiteral( "splash.png" ) );
 
+
   if ( QScreen *screen = QGuiApplication::primaryScreen() )
   {
     pixmap.setDevicePixelRatio( screen->devicePixelRatio() );
   }
-
   int w = 600 * pixmap.devicePixelRatioF();
   int h = 300 * pixmap.devicePixelRatioF();
+
+  //if splashw and splashh are set in customization, use them
+  if ( QgsCustomization::instance()->splashWidth() > 0 )
+  {
+    splashw = QgsCustomization::instance()->splashWidth();
+    w = splashw * pixmap.devicePixelRatioF();
+  }
+  if ( QgsCustomization::instance()->splashHeight() > 0 )
+  {
+    splashh = QgsCustomization::instance()->splashHeight();
+    h = splashh * pixmap.devicePixelRatioF();
+  }
+
+
+
 
   QSplashScreen *mypSplash = new QSplashScreen( pixmap.scaled( w, h, Qt::KeepAspectRatio, Qt::SmoothTransformation ) );
 
