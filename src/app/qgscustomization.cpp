@@ -1122,7 +1122,7 @@ QString QgsCustomization::splashWidth() const
 {
   if ( isEnabled() )
   {
-    QString w = mSettings->value( QStringLiteral( "/Customization/splashw" ).toInt());
+    int w = mSettings->value( QStringLiteral( "/Customization/splashw" ).toInt());
     return w;
   }
   else
@@ -1135,7 +1135,7 @@ QString QgsCustomization::splashHeight() const
 {
   if ( isEnabled() )
   {
-    QString h = mSettings->value( QStringLiteral( "/Customization/splashh" ).toInt());
+    int h = mSettings->value( QStringLiteral( "/Customization/splashh" ).toInt());
     return h;
   }
   else
