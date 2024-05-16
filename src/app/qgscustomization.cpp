@@ -1117,6 +1117,34 @@ QString QgsCustomization::splashPath() const
   }
 }
 
+
+QString QgsCustomization::splashWidth() const
+{
+  if ( isEnabled() )
+  {
+    int w = mSettings->value( QStringLiteral( "/Customization/splashw" ).toInt());
+    return w;
+  }
+  else
+  {
+    return 600;
+  }
+}
+
+QString QgsCustomization::splashHeight() const
+{
+  if ( isEnabled() )
+  {
+    int h = mSettings->value( QStringLiteral( "/Customization/splashh" ).toInt());
+    return h;
+  }
+  else
+  {
+    return 300;
+  }
+}
+
+
 void QgsCustomization::loadDefault()
 {
   QSettings mySettings;
