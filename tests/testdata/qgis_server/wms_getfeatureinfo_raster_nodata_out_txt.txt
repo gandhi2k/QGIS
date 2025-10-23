@@ -1,7 +1,0 @@
-*****
-Content-Type: text/plain; charset=utf-8
-
-GetFeatureInfo results
-
-Layer 'requires_warped_vrt'
-

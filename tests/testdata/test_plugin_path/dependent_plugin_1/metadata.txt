@@ -1,7 +1,0 @@
-[general]
-name=Dependent plugin 1
-description=A dependent plugin
-version=1.0
-qgisMinimumVersion=3.0
-author=Germán Carrillo
-plugin_dependencies=plugin path test

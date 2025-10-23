@@ -1,5 +1,0 @@
-{
-  "name": "Files and Paths",
-  "type": "group",
-  "description": "Contains functions which manipulate file and path names."
-}

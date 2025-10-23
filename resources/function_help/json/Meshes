@@ -1,6 +1,0 @@
-{
-  "name": "Meshes",
-  "type": "group",
-  "description": "Contains functions which calculate or return mesh related values.",
-  "tags": ["calculate", "functions", "return", "mesh", "related", "contains"]
-}

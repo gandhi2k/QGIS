@@ -1,5 +1,0 @@
-{
-  "name": "Form",
-  "type": "group",
-  "description": "This group contains functions that are available in the attribute form context. For example, in field widget settings."
-}
